@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Diário</title>
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <a class="nav-button" href="Index.html">Início</a>
+                <a class="nav-button active" href="Jogos_Lúdicos.html">Jogos lúdicos</a>
+                <a class="nav-button" href="Selo.html">Pontos Atuais</a>
+                <a class="nav-button" href="contato.html">Fale conosco</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="main-header">
+                <div>
+                    <h1>Termo</h1>
+                    <p>Adivinhe a palavra de 5 letras sobre nosso acervo cultural e natural em 6 tentativas.</p>
+                </div>
+                <button id="reset-button" class="tema" type="button">Reiniciar</button>
+            </div>
+ 
+            <div id="termo" class="termo" aria-label="Jogo Termo"></div>
+            <div class="controles-termo">
+                <input id="tentativa-input" class="termo-input" type="text" maxlength="5" placeholder="Digite 5 letras" />
+                <button id="envio-Tentativa" class="theme-toggle" type="button">Enviar</button>
+            </div>
+            <p id="message" class="Termo-status"></p>
+        </main>
+    </div>
+ 
+    <script src="jogos_ludicos.js"></script>
+</body>
+</html>
+ 

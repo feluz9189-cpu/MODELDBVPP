@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Selo - Desbravapp</title>
+    <link rel="stylesheet" href="Styles/index.css">
+   
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <a class="nav-button" href="Index.html">Início</a>
+                <a class="nav-button" href="Jogos_Lúdicos.html">Jogos lúdicos</a>
+                <a class="nav-button active" href="Selo.html">Pontos Atuais</a>
+                <a class="nav-button" href="contato.html">Fale conosco</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="main-header">
+                <div>
+                    <h1>Adicionar Selo Turista Consciente</h1>
+                    <p class="puzzle-description">Carregue uma foto e adicione o selo turista consciente</p>
+                </div>
+                <a href="Selo.html" class="tema">Voltar</a>
+            </div>
+
+            <div class="editor-container">
+                <!-- Upload Section -->
+                <div class="upload-section">
+                    <h3>1. Escolha uma foto</h3>
+                    <div class="file-input-wrapper">
+                        <button class="upload-btn">Selecionar Foto</button>
+                        <input type="file" id="photoInput" accept="image/*">
+                    </div>
+                    <p class="info-message">Formatos aceitos: JPG, PNG, GIF, WebP</p>
+                </div>
+
+                <!-- Seal Position Control -->
+                <div class="seal-position-control hidden" id="positionControl">
+                    <label>2. Escolha a posição do selo:</label>
+                    <div class="position-buttons">
+                        <button class="position-btn active" data-position="bottom-right">Canto inferior direito</button>
+                        <button class="position-btn" data-position="bottom-left">Canto inferior esquerdo</button>
+                        <button class="position-btn" data-position="bottom-center">Centro inferior</button>
+                    </div>
+                </div>
+
+                <!-- Preview Section -->
+                <div class="preview-section hidden" id="previewSection">
+                    <h3>3. Pré-visualização</h3>
+                    <div id="canvas-container">
+                        <canvas id="previewCanvas"></canvas>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="controls-section">
+                        <button class="download-btn" id="downloadBtn">Baixar Foto com Selo</button>
+                        <button class="reset-btn" id="resetBtn">Carregar outra foto</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="ediSelo.js"></script>
+</body>
+</html>

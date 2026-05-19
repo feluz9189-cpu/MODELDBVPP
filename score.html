@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos Atuais</title>
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <a class="nav-button" href="Index.html">Início</a>
+                <a class="nav-button" href="Jogos_Lúdicos.html">Jogos lúdicos</a>
+                <a class="nav-button active" href="Selo.html">Pontos Atuais</a>
+                <a class="nav-button" href="contato.html">Fale conosco</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="main-header">
+                <div>
+                    <h1>Pontos Atuais</h1>
+                    <p>Veja o score acumulado por todos os jogadores até agora.</p>
+                </div>
+                <button onclick="fetchScore()" class="tema" type="button">Atualizar</button>
+            </div>
+ 
+            <div class="score-display">
+                <p class="score-label">Score Global</p>
+                <p class="score-value" id="score-value">—</p>
+                <p class="score-status" id="score-status">Carregando...</p>
+            </div>
+        </main>
+    </div>
+ 
+    
+<script src="score.js"></script>
+</body>
+</html>

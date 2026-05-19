@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbravapp Home</title>
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <a class="nav-button active" href="Index.html">Início</a>
+                <a class="nav-button" href="Jogos_Lúdicos.html">Jogos lúdicos</a>
+                <a class="nav-button" href="Selo.html">Pontos Atuais</a>
+                <a class="nav-button" href="contato.html">Fale conosco</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="main-header">
+                <div>
+                    <h1>Bem vindo ao desbravapp Online</h1>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+            </div>
+            <h2>Locais</h2>
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="accordion-title">Cachoeira do Urubú</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, voluptatem. Perferendis quas laudantium dicta nisi eveniet nesciunt error, corrupti quam numquam, sequi dolore ex aut impedit totam, odit blanditiis quis?</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="accordion-title">Pedra Branca</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, voluptatem. Perferendis quas laudantium dicta nisi eveniet nesciunt error, corrupti quam numquam, sequi dolore ex aut impedit totam, odit blanditiis quis?</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="accordion-title">Cachoeira do Xixá</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, voluptatem. Perferendis quas laudantium dicta nisi eveniet nesciunt error, corrupti quam numquam, sequi dolore ex aut impedit totam, odit blanditiis quis?</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            document.querySelectorAll('.accordion-header').forEach(button => {
+                button.addEventListener('click', () => {
+                    const item = button.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+                    
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const pageBody = document.body;
+            themeToggle.addEventListener('click', () => {
+                const isDark = pageBody.classList.toggle('dark-mode');
+                themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+            });
+        </script>
+    </div>
+
+</body>
+</html>
